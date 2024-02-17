@@ -6,9 +6,15 @@
     background: none;
 }
 
-body{
-    background: aliceblue url(./puplic/herbs-906140_1280.jpg) no-repeat  fixed center ;
+ body{
+    background: aliceblue url(./puplic/herbs.jpg) no-repeat  fixed center ;
     backdrop-filter: blur(1px);
+    background-size: min(90%,800px);
+} 
+
+form{
+    margin-bottom: 20px;
+    width: min(80%, 600px);
 }
 
 body,
@@ -45,9 +51,8 @@ body,
 .visitor,
 .sub{
     background-color: rgb(255, 255, 255, 0.5);
-    margin-bottom: 20px;
     padding: 20px;
-    width: min(80%, 600px);
+    border-radius: 10px;
 }
 
 .sign-in > *,
@@ -146,24 +151,35 @@ input[type='radio']{
 }
 
 
-/* 
-.sign-in,
-.visitor,
-.sign-up,
-.sub{
-    display: none;
-} */
-
-
 
 /* valid and invalid forms */
 
-.sign-in input:valid,
-.sign-up input:valid{
+
+input:valid{
+    background-color: green;
+    border-radius: 5px;
+}
+
+input:invalid{
+    background-color: red;
+    border-radius: 5px;
+}
+
+#newslatters{
+    background-color: rgb(0,0,0, .1);
+    border-radius: 5px;
+    border-color: rgb(0,0,0, .3);
+}
+/* hide class for js */
+.hide{
+    display: none;
+}
+
+.valid{
     background-color: green;
 }
 
-.sign-in input:invalid,
-.sign-up input:invalid{
+.invalid{
     background-color: red;
 }
+
