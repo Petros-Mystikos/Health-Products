@@ -3,6 +3,12 @@
     padding: 0;
     margin: 0;
     box-sizing: border-box;
+    background: none;
+}
+
+body{
+    background: aliceblue url(./puplic/herbs-906140_1280.jpg) no-repeat  fixed center ;
+    backdrop-filter: blur(1px);
 }
 
 body,
@@ -20,9 +26,11 @@ body,
 /* the welcoming message */
 .welcome{
     margin: 100px 5px 20px 5px;
+    background-color: rgb(245,255,250, 0.5);
 }
 
 .welcome > *{
+    padding: 0 10px;
     margin: 5px;
     margin-inline: auto;
 }
@@ -36,6 +44,8 @@ body,
 .sign-up,
 .visitor,
 .sub{
+    background-color: rgb(255, 255, 255, 0.5);
+    margin-bottom: 20px;
     padding: 20px;
     width: min(80%, 600px);
 }
@@ -71,11 +81,9 @@ body,
 /* the buttons for each box */
 .links > button{
     border: none;
-    background-color: white;
     font-size: 20px ;
     margin-bottom: 30px;
     margin-inline: 2px;
-    text-decoration: underline;
     cursor: pointer;
 }
 
@@ -97,7 +105,8 @@ body,
 /* checkbox  and radio buttons color */
 input[type='checkbox'],
 input[type='radio']{
-    accent-color: red;
+    accent-color: lime;
+
 }
 
 /* the labels with the text inputs for sign in and sign up*/
@@ -134,4 +143,27 @@ input[type='radio']{
    padding: 10px;
    border-radius: 15px;
    font-size: 15px;
+}
+
+
+/* 
+.sign-in,
+.visitor,
+.sign-up,
+.sub{
+    display: none;
+} */
+
+
+
+/* valid and invalid forms */
+
+.sign-in input:valid,
+.sign-up input:valid{
+    background-color: green;
+}
+
+.sign-in input:invalid,
+.sign-up input:invalid{
+    background-color: red;
 }

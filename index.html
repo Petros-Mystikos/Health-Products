@@ -24,13 +24,13 @@
         <legend >Sign in</legend>
 
         <div class="sign-in-divs">
-            <label for="username" class="user-sin-in">Username</label>
-            <input type="text" name="username" id="username">
+            <label for="username" class="user-sin-in" >Username</label>
+            <input type="text" name="username" id="username" minlength="3" required>
         </div>
 
         <div class="sign-in-divs">
             <label for="password" class="password-sign-in">Password</label>
-            <input type="password" name="password" id="password">
+            <input type="password" name="password" id="password" minlength="8" maxlength="16" required>
         </div>
 
         <div>
@@ -46,29 +46,29 @@
 
         <div class="sign-up-divs">
             <label for="newUsername">Username</label>
-            <input type="text" name="newUsername" id="newUsername">
+            <input type="text" name="newUsername" id="newUsername" minlength="3" required>
         </div>
         
         <div class="sign-up-divs">
             <label for="email">Email</label>
-            <input type="email" name="email" id="email">
+            <input type="text" name="email" id="email" pattern="[A-Z a-z 0-9 ,_;'?';''\\\/\.\-\+]+@[A-Z a-z 0-9_\-]+\.\w{2,3}"required>
         </div>
 
         <div class="sign-up-divs">
             <label for="newPassword">Password</label>
-            <input type="password" name="newPassword" id="newPassword">
+            <input type="password" name="newPassword" id="newPassword" pattern="(?=.*[a-z])(?=.*[A-Z])(?=.*[0-9])(?=.*[!@#$%^&*_=\+\-]).{8,16}"required>
         </div>
 
         <div class="sign-up-divs">
             <label for="confirm-password">Confirm Password</label>
-            <input type="password" name="confirm-password" id="confirm-password">
+            <input type="password" name="confirm-password" id="confirm-password" minlength="8" maxlength="16" required>
         </div>
 
         <fieldset class="age-category">
             <legend class="category">Choose your age</legend>
 
             <label for="teen">
-            <input type="radio" name="age" id="teen">Teen
+            <input type="radio" name="age" id="teen" checked>Teen
             </label>
 
             <label for="adult">
@@ -91,7 +91,7 @@
     <div class="sub">
         <p class="newsletter">Be always the first to know about our new products</p>
         <label class="follower-label" for="newslatters">
-            <input placeholder="Email address" type="email" name="newslatters" id="newslatters">
+            <input placeholder="Email address" type="email" name="newslatters" id="newslatters" pattern="[A-Z a-z 0-9 ,_;'?';''\\\/\.\-\+]+@[A-Z a-z 0-9_\-]+\.\w{2,3}">
             <button class="follower" type="submit">I want in</button>
         </label>
         
