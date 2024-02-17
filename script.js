@@ -56,11 +56,11 @@ function chooseForm(sign){
 
 function confirmation() {
     if(password.value === confirmPassword.value){
-        confirmPassword.style.backgroundColor ='green';
+        confirmPassword.style.backgroundColor ='lightgreen';
         console.log('ok');
     }
     else{
-        confirmPassword.style.backgroundColor ='red';
+        confirmPassword.style.backgroundColor ='lightcoral';
         console.log('not ok');
     }
 }
