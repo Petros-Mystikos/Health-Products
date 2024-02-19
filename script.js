@@ -7,6 +7,9 @@ const sub = document.querySelector('.sub');
 const newsletters =document.querySelector('.follower');
 const password = document.querySelector('#newPassword');
 const confirmPassword = document.querySelector('#confirm-password');
+const signUpForm = document.querySelector('.sign-up-form');
+const requirements = document.querySelector('.requirements');
+const samePassword = document.querySelector('.same-password');
 
 // addEventListener
 
@@ -14,15 +17,28 @@ form.addEventListener('click', e =>{
     chooseForm(e)
 });
 
-newsletters.addEventListener('click', (e) =>{
-    e.preventDefault();
+password.addEventListener('focus', ()=>{
+    requirements.textContent = 'Password must contain at least one lowercase letter, one uppercase letter and one symbol'
+})
+
+password.addEventListener('focusout', ()=>{
+    requirements.textContent = ''
 })
 
 confirmPassword.addEventListener('keyup',e =>{
     confirmation()
 })
 
+signUpForm.addEventListener('submit', e =>{
+    if(password.value !== confirmPassword.value){
+        e.preventDefault();
+        wrong();
+    }
+})
 
+newsletters.addEventListener('click', (e) =>{
+    e.preventDefault();
+})
 
 // functions
 function chooseForm(sign){
@@ -51,18 +67,20 @@ function chooseForm(sign){
     }
 }
 
+function wrong(){
+    confirmPassword.focus();
+    samePassword.textContent = "Password doesn't match";
+    samePassword.style.color = 'red';
+}
 
 // password authentication
 
 function confirmation() {
     if(password.value === confirmPassword.value){
         confirmPassword.style.backgroundColor ='lightgreen';
-        console.log('ok');
     }
     else{
         confirmPassword.style.backgroundColor ='lightcoral';
-        console.log('not ok');
     }
 }
-
 

@@ -39,7 +39,7 @@
         </fieldset>
     </form>
 
-    <form  autocomplete="off" action="">
+    <form class="sign-up-form" autocomplete="off" action="" >
         <fieldset class="sign-up hide">
             <legend>Sign Up</legend>
             <div class="sign-up-divs">
@@ -53,11 +53,13 @@
             </div>
             <div class="sign-up-divs">
                 <label for="newPassword">Password</label>
-                <input type="password" name="newPassword" id="newPassword" pattern="(?=.*[a-z])(?=.*[A-Z])(?=.*[0-9])(?=.*[!@#$%^&*_=\+\-]).{8,16}"required>
+                <input type="password" name="newPassword" id="newPassword" pattern="(?=.*[a-z])(?=.*[A-Z])(?=.*[0-9])(?=.*[!@#$%^&*_=\+\-]).{8,16}" required>
+                <p class="requirements"></p>
             </div>
             <div class="sign-up-divs">
                 <label for="confirm-password">Confirm Password</label>
                 <input type="password" name="confirm-password" id="confirm-password" required>
+                <p class="same-password"></p>
             </div>
             <fieldset class="age-category">
                 <legend class="category">Choose your age</legend>
@@ -69,7 +71,7 @@
                 </label>
         
             </fieldset>
-            <button type="submit">Submit</button>
+            <button id="sign-up-submit" type="submit">Submit</button>
         </fieldset>
     </form>
 

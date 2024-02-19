@@ -47,7 +47,7 @@ body,
     font-size: 20px;
 }
 
-/* the fieldstes and their legends and buttons */
+/* the fieldstes, their legends and buttons  and inputs*/
 
 .sign-in,
 .sign-up,
@@ -82,8 +82,12 @@ body,
 .visitor > button,
 .sub > button{
     padding: 10px;
-    font-size: 15px;
+    font-size: 18px;
     border-radius: 15px;
+}
+
+input{
+    font-size: 18px;
 }
 
 /* the buttons for each box */
@@ -112,12 +116,16 @@ body,
     margin-inline: 20px;
 }
 
-/* checkbox  and radio buttons color */
+/* checkbox  and radio buttons color  and dimensions*/
 
 input[type='checkbox'],
 input[type='radio']{
     accent-color: lime;
 
+}
+input[type='checkbox']{
+    height: 15px;
+    width: 15px;
 }
 
 /* the labels with the text inputs for sign in and sign up*/
@@ -182,3 +190,10 @@ input:invalid{
     display: none;
 }
 
+/* the paragraphs for the passwords */
+input + p{
+    position: relative;
+    left: 170px;
+    width: 236px;
+    font-size: 18px;
+}
